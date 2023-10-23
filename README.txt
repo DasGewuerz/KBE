@@ -1,2 +1,0 @@
-Teammitglieder: Anis, Timon
-

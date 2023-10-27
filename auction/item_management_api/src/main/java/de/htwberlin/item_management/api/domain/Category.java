@@ -36,5 +36,9 @@ public class Category {
 	public void setItems(List<Item> items) {
 		this.items = items;
 	}
+	@Override
+	public String toString() {
+		return "Category [name=" + name + "]";
+	}
 
 }

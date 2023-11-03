@@ -1,32 +1,21 @@
-
-
 public class Vokabel {
-    private long VokabelID;
+    private int VokabelID;
     private boolean Gelernt;
     private String Vokabel1;
-    private String Vokabel2;
+    private List<String> Vokabel2;
 
-    public Vokabel(long VokabelID, boolean Gelernt, String Vokabel1, String Vokabel2) {
+    public Vokabel(int VokabelID, boolean Gelernt, String Vokabel1, List<String> Vokabel2) {
         this.VokabelID = VokabelID;
-        this.Gelernt = Gelernt;
         this.Vokabel1 = Vokabel1;
         this.Vokabel2 = Vokabel2;
     }
 
-    public long getVokabelID() {
+    public int getVokabelID() {
         return VokabelID;
     }
 
-    public void setVokabelID(long VokabelID) {
+    public void setVokabelID(int VokabelID) {
         this.VokabelID = VokabelID;
-    }
-
-    public boolean isGelernt() {
-        return Gelernt;
-    }
-
-    public void setGelernt(boolean Gelernt) {
-        this.Gelernt = Gelernt;
     }
 
     public String getVokabel1() {
@@ -41,7 +30,7 @@ public class Vokabel {
         return Vokabel2;
     }
 
-    public void setVokabel2(String Vokabel2) {
+    public void setVokabel2(List<String> Vokabel2) {
         this.Vokabel2 = Vokabel2;
     }
 
@@ -49,7 +38,5 @@ public class Vokabel {
     public String toString() {
         return "Vokabel{" + "VokabelID=" + VokabelID + ", Gelernt=" + Gelernt + ", Vokabel1=" + Vokabel1 + ", Vokabel2=" + Vokabel2 + '}';
     }
-
-    
     
 }

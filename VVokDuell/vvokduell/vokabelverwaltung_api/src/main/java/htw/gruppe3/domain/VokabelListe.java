@@ -1,14 +1,14 @@
 import java.util.List;
 
 public class VokabelListe {
-    private long VokabellisteID;
+    private int VokabellisteID;
     private List<Vokabel> Vokabeln;
     private String Name;
     private String Sprache1;
     private String Sprache2;
 
     
-    public VokabelListe(long VokabellisteID, List<Vokabel> Vokabeln, String Name, String Sprache1, String Sprache2) {
+    public VokabelListe(int VokabellisteID, List<Vokabel> Vokabeln, String Name, String Sprache1, String Sprache2) {
         this.VokabellisteID = VokabellisteID;
         this.Vokabeln = Vokabeln;
         this.Name = Name;
@@ -16,11 +16,11 @@ public class VokabelListe {
         this.Sprache2 = Sprache2;
     }
 
-    public long getVokabellisteID() {
+    public int getVokabellisteID() {
         return VokabellisteID;
     }
 
-    public void setVokabellisteID(long VokabellisteID) {
+    public void setVokabellisteID(int VokabellisteID) {
         this.VokabellisteID = VokabellisteID;
     }
 

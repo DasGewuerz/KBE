@@ -1,10 +1,3 @@
-public class Statistik {
-    private int StatistikID;
-    private Benutzer Benutzer;
-    private List<DuellErgebnis> Duellergebnisse;
-
-    
-}
 import java.util.List;
 
 public class Statistik {
@@ -14,7 +7,7 @@ public class Statistik {
 
     public Statistik(int statistikID, Benutzer benutzer, List<DuellErgebnis> duellErgebnisse) {
         this.statistikID = statistikID;
-        this.benutzer = benutzer;
+        this.benutzerID = benutzer;
         this.duellErgebnisse = duellErgebnisse;
     }
 

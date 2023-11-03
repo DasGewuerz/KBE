@@ -6,14 +6,14 @@ public class Duell {
     private Benutzer Benutzer1;
     private Benutzer Benutzer2;
     private Vokabelliste Vokabelliste;
-    private List<Map<Long, Boolean>> Antwortliste;
+    private Spielliste Spielliste;
 
-    public Duell(long duellID, Benutzer benutzer1, Benutzer benutzer2, Vokabelliste vokabelliste, List<Map<Long, Boolean>> antwortliste) {
+    public Duell(long duellID, Benutzer benutzer1, Benutzer benutzer2, Vokabelliste vokabelliste, Spielliste Spielliste) {
         DuellID = duellID;
         Benutzer1 = benutzer1;
         Benutzer2 = benutzer2;
         Vokabelliste = vokabelliste;
-        Antwortliste = antwortliste;
+        Spielliste = spielliste;
     }
 
     public long getDuellID() {
@@ -48,12 +48,12 @@ public class Duell {
         Vokabelliste = vokabelliste;
     }
 
-    public List<Map<Long, Boolean>> getAntwortliste() {
-        return Antwortliste;
+    public List<Map<Long, Boolean>> getSpielliste() {
+        return Spielliste;
     }
 
-    public void setAntwortliste(List<Map<Long, Boolean>> antwortliste) {
-        Antwortliste = antwortliste;
+    public void setSpielliste(Spielliste spielliste) {
+        Spielliste = spielliste;
     }
 
     @Override
@@ -63,7 +63,7 @@ public class Duell {
                 ", Benutzer1=" + Benutzer1 +
                 ", Benutzer2=" + Benutzer2 +
                 ", Vokabelliste=" + Vokabelliste +
-                ", Antwortliste=" + Antwortliste +
+                ", Spielliste=" + <<Spielliste>> +
                 '}';
     }
 }

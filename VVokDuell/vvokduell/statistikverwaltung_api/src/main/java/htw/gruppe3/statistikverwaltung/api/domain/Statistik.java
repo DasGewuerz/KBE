@@ -14,6 +14,12 @@ public class Statistik {
     private Benutzer benutzer;
     private List<DuellErgebnis> duellErgebnisse;
 
+    /**
+     * Repräsentiert ein Statistik-Objekt, das die ID, den Benutzer und eine Liste von Duellergebnissen enthält.
+     * @param statistikID Die ID der Statistik.
+     * @param benutzer Der Benutzer, der mit der Statistik verbunden ist.
+     * @param duellErgebnisse Die Liste der mit der Statistik verbundenen Duellergebnisse.
+     */
     public Statistik(int statistikID, Benutzer benutzer, List<DuellErgebnis> duellErgebnisse) {
         this.statistikID = statistikID;
         this.benutzer = benutzer;

@@ -10,8 +10,16 @@ import htw.gruppe3.duellverwaltung.api.domain.DuellErgebnis;
 
 import java.sql.Timestamp;
 
+/**
+ * Diese Klasse enthält Unit-Tests für die StatistikverwaltungImpl-Klasse.
+ */
 public class StatistikverwaltungImplTest {
 
+    /**
+     * Testet die Erstellung eines Statistik-Objekts mit Hilfe der erstelleStatistik-Methode der Klasse StatistikverwaltungImpl.
+     * Es wird ein neues StatistikverwaltungImpl-Objekt, ein Benutzer-Objekt, zwei DuellErgebnis-Objekte und eine Liste von DuellErgebnissen erstellt.
+     * Anschließend wird die erstelleStatistik-Methode mit diesen Objekten aufgerufen und überprüft, ob das zurückgegebene Statistik-Objekt die erwarteten Werte hat.
+     */
     @Test
     public void testErstelleStatistik() {
         StatistikverwaltungImpl statistikverwaltung = new StatistikverwaltungImpl();

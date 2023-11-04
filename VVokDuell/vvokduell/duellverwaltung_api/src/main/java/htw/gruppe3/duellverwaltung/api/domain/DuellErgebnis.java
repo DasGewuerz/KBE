@@ -9,6 +9,10 @@ import java.sql.Timestamp;
  * @param Ergebnis Das Ergebnis des Duells.
  * @param Timestamp Der Zeitstempel, an dem das Ergebnis ermittelt wurde.
  */
+/**
+ * Die Klasse DuellErgebnis repräsentiert das Ergebnis eines Duells.
+ * Sie enthält Informationen wie die ID des Ergebnisses, das Duell, das Ergebnis selbst und den Zeitpunkt, zu dem das Ergebnis festgestellt wurde.
+ */
 public class DuellErgebnis {
     private int DuellergebnisID;
     private Duell Duell;
@@ -29,48 +33,48 @@ public class DuellErgebnis {
         Timestamp = timestamp;
     }
 
-    
-    /** 
+    /**
+     * Gibt die ID des DuellErgebnisses zurück
      * @return int
      */
     public int getDuellergebnisID() {
         return DuellergebnisID;
     }
 
-    
-    /** 
+    /**
+     * Setzt die ID des DuellErgebnisses
      * @param duellergebnisID ID des DuellErgebnisses
      */
     public void setDuellergebnisID(int duellergebnisID) {
         DuellergebnisID = duellergebnisID;
     }
 
-    
-    /** 
+    /**
+     * Gibt das Duell zurück, für das das Ergebnis vorliegt
      * @return Duell
      */
     public Duell getDuell() {
         return Duell;
     }
 
-    
-    /** 
+    /**
+     * Setzt das Duell, für das das Ergebnis vorliegt
      * @param duell Duell, für das das Ergebnis vorliegt
      */
     public void setDuell(Duell duell) {
         Duell = duell;
     }
 
-    
-    /** 
+    /**
+     * Gibt das Ergebnis des Duells zurück
      * @return boolean
      */
     public boolean getErgebnis() {
         return Ergebnis;
     }
 
-    
-    /** 
+    /**
+     * Setzt das Ergebnis des Duells
      * @param ergebnis Ergebnis des Duells
      */
     public void setErgebnis(boolean ergebnis) {

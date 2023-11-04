@@ -1,4 +1,4 @@
-package htw.gruppe3;
+package htw.gruppe3.benutzerverwaltung.api;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package htw.gruppe3.benutzerverwaltung.api.domain;
+
 public class Benutzer {
     private int BenutzerID;
     private String Name;
@@ -23,11 +25,6 @@ public class Benutzer {
         Name = name;
     }
 
-    @override
-    public String toString() {
-        return "Benutzer{" +
-                "BenutzerID=" + BenutzerID +
-                ", Name='" + Name + '\'' +
-                '}';
-    }
+
+
 }

@@ -12,7 +12,7 @@ import htw.gruppe3.vokabelverwaltung.api.domain.VokabelListe;
 public interface Vokabelverwaltung {
 
     /**
-     * Erstellt eine neue Vokabel mit der angegebenen ID, dem Gelernt-Status, dem Vokabeltext in Sprache 1 und einer Liste von Vokabeltexten in Sprache 2.
+     * Erstellt eine neue Vokabel mit der angegebenen ID, dem Vokabeltext in Sprache 1 und einer Liste von Vokabeltexten in Sprache 2.
      *
      * @param VokabelID Die ID der Vokabel.
      * @param Vokabel1 Der Vokabeltext in Sprache 1.

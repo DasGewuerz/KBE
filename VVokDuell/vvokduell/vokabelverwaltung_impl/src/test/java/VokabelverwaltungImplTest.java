@@ -39,4 +39,6 @@ public class VokabelverwaltungImplTest {
         assertEquals("Deutsch", vokabelListe.getSprache1());
         assertEquals("Englisch", vokabelListe.getSprache2());
     }
+
+    //TODO:löschen implementieren im Service
 }

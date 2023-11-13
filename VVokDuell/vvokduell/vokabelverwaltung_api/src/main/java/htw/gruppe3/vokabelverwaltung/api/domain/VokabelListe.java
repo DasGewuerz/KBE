@@ -12,6 +12,7 @@ public class VokabelListe {
     private String Name;
     private String Sprache1;
     private String Sprache2;
+    //TODO:kategorie hinzufügen
 
     /**
      * Konstruktor für die VokabelListe-Klasse.

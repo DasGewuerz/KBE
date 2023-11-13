@@ -8,7 +8,8 @@ import java.util.List;
 public class Vokabel {
     private int VokabelID;
     private String Vokabel1;
-    private List<String> Vokabel2;
+    private List<String> Vokabel2; //TODO:Liste von Listen
+    //TODO:n zu 1ner Frage
 
     /**
      * Konstruktor für die Vokabel-Klasse.

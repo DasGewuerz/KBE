@@ -18,6 +18,7 @@ public class DuellErgebnis {
     private Duell Duell;
     private boolean Ergebnis;
     private Timestamp Timestamp;
+    //gewinner muss zugewiesen werden
 
     /**
      * Konstruktor für die Klasse DuellErgebnis

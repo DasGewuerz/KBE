@@ -3,7 +3,7 @@ import java.sql.Timestamp;
 
 /**
  * Die Klasse DuellErgebnis repräsentiert das Ergebnis eines Duells.
- * 
+ *
  * @param DuellergebnisID Die ID des Duell-Ergebnisses.
  * @param Duell Das Duell, für das das Ergebnis gilt.
  * @param Ergebnis Das Ergebnis des Duells.
@@ -14,48 +14,48 @@ import java.sql.Timestamp;
  * Sie enthält Informationen wie die ID des Ergebnisses, das Duell, das Ergebnis selbst und den Zeitpunkt, zu dem das Ergebnis festgestellt wurde.
  */
 public class DuellErgebnis {
-    private int DuellergebnisID;
-    private Duell Duell;
-    private boolean Ergebnis;
-    private Timestamp Timestamp;
+    private int duellErgebnisID;
+    private Duell duell;
+    private boolean ergebnis;
+    private Timestamp timestamp;
     //gewinner muss zugewiesen werden
 
     /**
      * Konstruktor für die Klasse DuellErgebnis
-     * @param duellergebnisID ID des DuellErgebnisses
-     * @param duell Duell, für das das Ergebnis vorliegt
+     * @param duellErgebnisID ID des DuellErgebnisses
+     * @param duell Duell für dass das Ergebnis vorliegt
      * @param ergebnis Ergebnis des Duells
-     * @param timestamp Zeitpunkt, zu dem das Ergebnis festgestellt wurde
+     * @param timestamp Zeitpunkt zu dem das Ergebnis festgestellt wurde
      */
-    public DuellErgebnis(int duellergebnisID, Duell duell, boolean ergebnis, Timestamp timestamp) {
-        DuellergebnisID = duellergebnisID;
-        Duell = duell;
-        Ergebnis = ergebnis;
-        Timestamp = timestamp;
+    public DuellErgebnis(int duellErgebnisID, Duell duell, boolean ergebnis, Timestamp timestamp) {
+        this.duellErgebnisID = duellErgebnisID;
+        this.duell = duell;
+        this.ergebnis = ergebnis;
+        this.timestamp = timestamp;
     }
 
     /**
      * Gibt die ID des DuellErgebnisses zurück
      * @return int
      */
-    public int getDuellergebnisID() {
-        return DuellergebnisID;
+    public int getDuellErgebnisID() {
+        return duellErgebnisID;
     }
 
     /**
      * Setzt die ID des DuellErgebnisses
-     * @param duellergebnisID ID des DuellErgebnisses
+     * @param duellErgebnisID ID des DuellErgebnisses
      */
-    public void setDuellergebnisID(int duellergebnisID) {
-        DuellergebnisID = duellergebnisID;
+    public void setDuellErgebnisID(int duellErgebnisID) {
+        this.duellErgebnisID = duellErgebnisID;
     }
 
     /**
      * Gibt das Duell zurück, für das das Ergebnis vorliegt
-     * @return Duell
+     * @return duell
      */
     public Duell getDuell() {
-        return Duell;
+        return duell;
     }
 
     /**
@@ -63,7 +63,7 @@ public class DuellErgebnis {
      * @param duell Duell, für das das Ergebnis vorliegt
      */
     public void setDuell(Duell duell) {
-        Duell = duell;
+        this.duell = duell;
     }
 
     /**
@@ -71,7 +71,7 @@ public class DuellErgebnis {
      * @return boolean
      */
     public boolean getErgebnis() {
-        return Ergebnis;
+        return ergebnis;
     }
 
     /**
@@ -79,15 +79,15 @@ public class DuellErgebnis {
      * @param ergebnis Ergebnis des Duells
      */
     public void setErgebnis(boolean ergebnis) {
-        Ergebnis = ergebnis;
+        this.ergebnis = ergebnis;
     }
 
     /**
      * Gibt den Zeitpunkt zurück, zu dem das Ergebnis festgestellt wurde
-     * @return Timestamp
+     * @return timestamp
      */
     public Timestamp getTimestamp() {
-        return Timestamp;
+        return timestamp;
     }
 
     /**
@@ -95,7 +95,7 @@ public class DuellErgebnis {
      * @param timestamp Zeitpunkt, zu dem das Ergebnis festgestellt wurde
      */
     public void setTimestamp(Timestamp timestamp) {
-        Timestamp = timestamp;
+        this.timestamp = timestamp;
     }
 
     /**
@@ -105,10 +105,10 @@ public class DuellErgebnis {
     @Override
     public String toString() {
         return "DuellErgebnis{" +
-                "DuellergebnisID=" + DuellergebnisID +
-                ", Duell=" + Duell +
-                ", Ergebnis=" + Ergebnis +
-                ", Timestamp=" + Timestamp +
+                "DuellergebnisID=" + duellErgebnisID +
+                ", Duell=" + duell +
+                ", Ergebnis=" + ergebnis +
+                ", Timestamp=" + timestamp +
                 '}';
     }
 }

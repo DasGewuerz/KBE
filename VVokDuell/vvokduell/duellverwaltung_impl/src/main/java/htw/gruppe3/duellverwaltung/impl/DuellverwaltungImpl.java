@@ -17,26 +17,26 @@ import java.util.Map;
  */
 public class DuellverwaltungImpl implements Duellverwaltung {
 
-    
-    /** 
+
+    /**
      * Erstellt ein neues Duell.
-     * 
+     *
      * @param duellID Die ID des Duells.
      * @param benutzer1 Der erste Benutzer.
      * @param benutzer2 Der zweite Benutzer.
-     * @param vokabelliste Die Liste der Vokabeln.
-     * @param spielliste Die Liste der Spiele.
+     * @param vokabelListe Die Liste der Vokabeln.
+     * @param spielListe Die Liste der Spiele.
      * @return Das erstellte Duell.
      */
     @Override
-    public Duell erstelleDuell(int duellID, Benutzer benutzer1, Benutzer benutzer2, VokabelListe vokabelliste, Spielliste spielliste) {
-        return new Duell(duellID, benutzer1, benutzer2, vokabelliste, spielliste);
+    public Duell erstelleDuell(int duellID, Benutzer benutzer1, Benutzer benutzer2, VokabelListe vokabelListe, Spielliste spielListe) {
+        return new Duell(duellID, benutzer1, benutzer2, vokabelListe, spielListe);
     }
 
-    
-    /** 
+
+    /**
      * Erstellt ein neues Duell-Ergebnis.
-     * 
+     *
      * @param duellErgebnisID Die ID des Duell-Ergebnisses.
      * @param duell Das Duell.
      * @param ergebnis Das Ergebnis des Duells.
@@ -44,39 +44,39 @@ public class DuellverwaltungImpl implements Duellverwaltung {
      * @return Das erstellte Duell-Ergebnis.
      */
     @Override
-    public DuellErgebnis erstelleDuellErgebnis(int duellErgebnisID, Duell duell, Boolean Ergebnis, Timestamp Timestamp) {
-        return new DuellErgebnis(DuellErgebnisID, Duell, Ergebnis, Timestamp);
+    public DuellErgebnis erstelleDuellErgebnis(int duellErgebnisID, Duell duell, Boolean ergebnis, Timestamp timestamp) {
+        return new DuellErgebnis(duellErgebnisID, duell, ergebnis, timestamp);
     }
 
-    
-    /** 
+
+    /**
      * Erstellt eine neue spielliste.
-     * 
-     * @param SpiellisteID Die ID der spielliste.
-     * @param Fragen Die Liste der Fragen.
-     * @param AktiveFrage Die aktive Frage.
-     * @param AktiverSpieler Der aktive Spieler.
+     *
+     * @param spielListeID Die ID der spielliste.
+     * @param fragen Die Liste der Fragen.
+     * @param aktiveFrage Die aktive Frage.
+     * @param aktiverSpieler Der aktive Spieler.
      * @return Die erstellte spielliste.
      */
     @Override
-    public spielliste erstelleSpielliste(int SpiellisteID, List<Frage> Fragen, int AktiveFrage, int AktiverSpieler) {
-        return new spielliste(SpiellisteID, Fragen, AktiveFrage, AktiverSpieler);
+    public spielliste erstelleSpielliste(int spielListeID, List<Frage> fragen, int aktiveFrage, int aktiverSpieler) {
+        return new spielliste(spielListeID, fragen, aktiveFrage, aktiverSpieler);
     }
 
-    
-    /** 
+
+    /**
      * Erstellt eine neue Frage.
-     * 
-     * @param FrageID Die ID der Frage.
-     * @param Vokabel Die Vokabel der Frage.
-     * @param SpiellisteID Die ID der spielliste.
-     * @param Antworten Die Liste der Antworten.
-     * @param Antwortoptionen Die Liste der Antwortoptionen.
+     *
+     * @param frageID Die ID der Frage.
+     * @param vokabel Die Vokabel der Frage.
+     * @param spielListeID Die ID der spielliste.
+     * @param antworten Die Liste der Antworten.
+     * @param antwortOptionen Die Liste der Antwortoptionen.
      * @return Die erstellte Frage.
      */
     @Override
-    public Frage erstelleFrage(int FrageID, Vokabel Vokabel, int SpiellisteID, Map<Integer, Boolean> Antworten, List<String> Antwortoptionen) {
-        return new Frage(FrageID, Vokabel, SpiellisteID, Antworten, Antwortoptionen);
+    public Frage erstelleFrage(int frageID, Vokabel vokabel, int spielListeID, Map<Integer, Boolean> antworten, List<String> antwortOptionen) {
+        return new Frage(frageID, vokabel, spielListeID, antworten, antwortOptionen);
     }
 }
 

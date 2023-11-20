@@ -3,7 +3,6 @@ package htw.gruppe3.vokabelverwaltung.api;
 import java.util.List;
 
 import htw.gruppe3.vokabelverwaltung.api.domain.Vokabel;
-
 import htw.gruppe3.vokabelverwaltung.api.domain.VokabelListe;
 
 /**
@@ -24,7 +23,7 @@ public interface Vokabelverwaltung {
     /**
      * Erstellt eine neue Vokabelliste mit der angegebenen ID, einer Liste von Vokabeln, einem Namen und den Sprachen der Vokabeln.
      *
-     * @param vokabellisteID Die ID der Vokabelliste.
+     * @param vokabelListeID Die ID der Vokabelliste.
      * @param vokabeln Eine Liste von Vokabeln.
      * @param name Der Name der Vokabelliste.
      * @param sprache1 Die Sprache der Vokabeln in Spalte 1.
@@ -32,6 +31,6 @@ public interface Vokabelverwaltung {
      * @param kategorie Die Kategorie der Vokabelliste
      * @return Die erstellte Vokabelliste.
      */
-    VokabelListe erstelleVokabelListe( int vokabellisteID, List<Vokabel> vokabeln, String name, String sprache1, String sprache2, String kategorie);
-    
+    VokabelListe erstelleVokabelListe( int vokabelListeID, List<Vokabel> vokabeln, String name, String sprache1, String sprache2, String kategorie);
+
 }

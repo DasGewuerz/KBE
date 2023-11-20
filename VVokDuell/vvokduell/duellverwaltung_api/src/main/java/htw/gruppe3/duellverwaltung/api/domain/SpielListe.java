@@ -6,26 +6,26 @@ import java.util.List;
  * Sie enthält eine eindeutige SpiellisteID, eine Liste von Fragen, den Index der aktiven Frage
  * und den Index des aktiven Spielers.
  */
-public class Spielliste {
-    private int SpiellisteID;
-    private List<Frage> Fragen;
-    private int AktiveFrage;
-    private int AktiverSpieler;
+public class SpielListe {
+    private int spielListeID;
+    private List<Frage> fragen;
+    private int aktiveFrage;
+    private int aktiverSpieler;
 
 
     /**
      * Konstruktor.
      *
-     * @param spiellisteID 
-     * @param fragen 
-     * @param aktiveFrage 
-     * @param aktiverSpieler 
+     * @param spielListeID
+     * @param fragen
+     * @param aktiveFrage
+     * @param aktiverSpieler
      */
-    public Spielliste(int spiellisteID, List<Frage> fragen, int aktiveFrage, int aktiverSpieler) {
-        SpiellisteID = spiellisteID;
-        Fragen = fragen;
-        AktiveFrage = aktiveFrage;
-        AktiverSpieler = aktiverSpieler;
+    public SpielListe(int spielListeID, List<Frage> fragen, int aktiveFrage, int aktiverSpieler) {
+        this.spielListeID = spielListeID;
+        this.fragen = fragen;
+        this.aktiveFrage = aktiveFrage;
+        this.aktiverSpieler = aktiverSpieler;
     }
 
     /**
@@ -33,17 +33,17 @@ public class Spielliste {
      *
      * @return Die Spielliste-ID.
      */
-    public int getSpiellisteID() {
-        return SpiellisteID;
+    public int getSpielListeID() {
+        return spielListeID;
     }
 
     /**
      * Setzt die Spielliste-ID.
      *
-     * @param spiellisteID Die neue Spielliste-ID.
+     * @param spielListeID Die neue Spielliste-ID.
      */
-    public void setSpiellisteID(int spiellisteID) {
-        SpiellisteID = spiellisteID;
+    public void setSpielListeID(int spielListeID) {
+        this.spielListeID = spielListeID;
     }
 
     /**
@@ -52,7 +52,7 @@ public class Spielliste {
      * @return Die Liste der Fragen.
      */
     public List<Frage> getFragen() {
-        return Fragen;
+        return fragen;
     }
 
     /**
@@ -61,7 +61,7 @@ public class Spielliste {
      * @param fragen Die neue Liste der Fragen.
      */
     public void setFragen(List<Frage> fragen) {
-        Fragen = fragen;
+        this.fragen = fragen;
     }
 
     /**
@@ -70,7 +70,7 @@ public class Spielliste {
      * @return Der Index der aktiven Frage.
      */
     public int getAktiveFrage() {
-        return AktiveFrage;
+        return aktiveFrage;
     }
 
     /**
@@ -79,7 +79,7 @@ public class Spielliste {
      * @param aktiveFrage Der neue Index der aktiven Frage.
      */
     public void setAktiveFrage(int aktiveFrage) {
-        AktiveFrage = aktiveFrage;
+        this.aktiveFrage = aktiveFrage;
     }
 
     /**
@@ -88,7 +88,7 @@ public class Spielliste {
      * @return Der Index des aktiven Spielers.
      */
     public int getAktiverSpieler() {
-        return AktiverSpieler;
+        return aktiverSpieler;
     }
 
     /**
@@ -97,7 +97,7 @@ public class Spielliste {
      * @param aktiverSpieler Der neue Index des aktiven Spielers.
      */
     public void setAktiverSpieler(int aktiverSpieler) {
-        AktiverSpieler = aktiverSpieler;
+        this.aktiverSpieler = aktiverSpieler;
     }
 
     /**
@@ -107,10 +107,10 @@ public class Spielliste {
     @Override
     public String toString() {
         return "Spielliste{" +
-                "SpiellisteID=" + SpiellisteID +
-                ", Fragen=" + Fragen +
-                ", AktiveFrage=" + AktiveFrage +
-                ", AktiverSpieler=" + AktiverSpieler +
+                "SpiellisteID=" + spielListeID +
+                ", Fragen=" + fragen +
+                ", AktiveFrage=" + aktiveFrage +
+                ", AktiverSpieler=" + aktiverSpieler +
                 '}';
     }
 }

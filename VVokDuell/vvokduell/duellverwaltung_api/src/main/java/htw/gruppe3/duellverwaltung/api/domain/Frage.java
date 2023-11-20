@@ -9,81 +9,81 @@ import htw.gruppe3.vokabelverwaltung.api.domain.Vokabel;
  * Enthält die Frage-ID, das entsprechende Vokabular, die ID der Spielliste, die möglichen Antworten und die Antwortoptionen.
  */
 public class Frage {
-    private int FrageID;
-    private Vokabel Vokabel;
-    private int SpiellisteID;
-    private Map<Integer,Boolean> Antworten;
-    private List<String> Antwortoptionen;
+    private int frageID;
+    private Vokabel vokabel;
+    private int spielListeID;
+    private Map<Integer,Boolean> antworten;
+    private List<String> antwortOptionen;
 
-    
-    /** 
+
+    /**
      * Konstruktor.
      * @param frageID
      * @param vokabel
-     * @param spiellisteID
+     * @param spielListeID
      * @param antworten
-     * @param antwortoptionen
+     * @param antwortOptionen
      */
-    public Frage(int frageID, Vokabel vokabel, int spiellisteID, Map<Integer,Boolean> antworten, List<String> antwortoptionen) {
-        FrageID = frageID;
-        Vokabel = vokabel;
-        SpiellisteID = spiellisteID;
-        Antworten = antworten;
-        Antwortoptionen = antwortoptionen;
+    public Frage(int frageID, Vokabel vokabel, int spielListeID, Map<Integer,Boolean> antworten, List<String> antwortOptionen) {
+        this.frageID = frageID;
+        this.Vokabel = vokabel;
+        this.spielListeID = spielListeID;
+        this.antworten = antworten;
+        this.antwortOptionen = antwortOptionen;
     }
 
-    
-    /** 
+
+    /**
      * Gibt die Frage-ID zurück.
      * @return int
      */
     public int getFrageID() {
-        return FrageID;
+        return frageID;
     }
 
-    
-    /** 
+
+    /**
      * Setzt die Frage-ID.
      * @param frageID
      */
     public void setFrageID(int frageID) {
-        FrageID = frageID;
+        this.frageID = frageID;
     }
 
-    
-    /** 
+
+    /**
      * Gibt das Vokabular zurück.
      * @return Vokabel
      */
     public Vokabel getVokabel() {
-        return Vokabel;
+        return vokabel;
     }
 
-    
-    /** 
+
+    /**
      * Setzt das Vokabular.
      * @param vokabel
      */
     public void setVokabel(Vokabel vokabel) {
-        Vokabel = vokabel;
+        this.vokabel = vokabel;
     }
 
-    
-    /** 
+
+    /**
      * Gibt die Spielliste-ID zurück.
      * @return int
      */
-    public int getSpiellisteID() {
-        return SpiellisteID;
+    public int getSpielListeID() {
+        return spielListeID;
     }
 
-    
-    /** 
+
+    /**
      * Setzt die Spielliste-ID.
-     * @param spiellisteID
+     * @param spielListeID
      */
-    public void setSpiellisteID(int spiellisteID) {
-        SpiellisteID = spiellisteID;
+    public void setSpielListeID(int spielListeID) {
+        this.spielListeID = spielListeID;
     }
 
     /**
@@ -91,7 +91,7 @@ public class Frage {
      * @return Map<Integer,Boolean>
      */
     public Map<Integer,Boolean> getAntworten () {
-        return Antworten;
+        return antworten;
     }
 
     /**
@@ -99,22 +99,22 @@ public class Frage {
      * @param antworten
      */
     public void setAntworten (Map<Integer,Boolean> antworten) {
-        Antworten = antworten;
+        this.antworten = antworten;
     }
 
     /**
      * Gibt die Antwortoptionen zurück.
      * @return List<String>
      */
-    public List<String> getAntwortoptionen () {
-        return Antwortoptionen;
+    public List<String> getAntwortOptionen() {
+        return antwortOptionen;
     }
 
     /**
      * Setzt die Antwortoptionen.
-     * @param antwortoptionen
+     * @param antwortOptionen
      */
-    public void setAntwortoptionen (List<String> antwortoptionen) {
-        Antwortoptionen = antwortoptionen;
+    public void setAntwortOptionen(List<String> antwortOptionen) {
+        this.antwortOptionen = antwortOptionen;
     }
 }

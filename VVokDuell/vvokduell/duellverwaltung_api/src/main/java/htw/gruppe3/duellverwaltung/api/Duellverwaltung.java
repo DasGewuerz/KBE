@@ -17,12 +17,12 @@ import htw.gruppe3.vokabelverwaltung.api.domain.Vokabel;
  */
 public interface Duellverwaltung {
 
-    Duell erstelleDuell(int DuellID, Benutzer Benutzer1, Benutzer Benutzer2, VokabelListe Vokabelliste, Spielliste Spielliste);
+    Duell erstelleDuell(int duellID, Benutzer benutzer1, Benutzer benutzer2, VokabelListe vokabelListe, SpielListe spielListe);
 
-    DuellErgebnis erstelleDuellErgebnis(int DuellErgebnisID, Duell Duell, Boolean Ergebnis, Timestamp Timestamp);
+    DuellErgebnis erstelleDuellErgebnis(int duellErgebnisID, Duell duell, Boolean ergebnis, Timestamp timestamp);
 
-    Spielliste erstelleSpielliste(int SpiellisteID, List<Frage> Fragen, int AktiveFrage, int AktiverSpieler);
+    Spielliste erstelleSpielListe(int spielListeID, List<Frage> fragen, int aktiveFrage, int aktiverSpieler);
 
-    Frage erstelleFrage (int FrageID, Vokabel Vokabel, int SpiellisteID, Map<Integer,Boolean> Antworten, List<String> Antwortoptionen);
+    Frage erstelleFrage (int frageID, Vokabel vokabel, int spielListeID, Map<Integer,Boolean> antworten, List<String> antwortOptionen);
 
 }

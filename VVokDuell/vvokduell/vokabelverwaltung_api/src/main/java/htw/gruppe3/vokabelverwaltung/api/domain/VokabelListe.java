@@ -7,28 +7,30 @@ import java.util.List;
  * Die Liste enthält eine Sammlung von Vokabel-Objekten.
  */
 public class VokabelListe {
-    private int VokabellisteID;
-    private List<Vokabel> Vokabeln;
-    private String Name;
-    private String Sprache1;
-    private String Sprache2;
-    //TODO:kategorie hinzufügen
+    private int vokabellisteID;
+    private List<Vokabel> vokabeln;
+    private String kategorie;
+    private String name;
+    private String sprache1;
+    private String sprache2;
 
     /**
      * Konstruktor für die VokabelListe-Klasse.
      * 
-     * @param VokabellisteID Die ID der Vokabelliste.
-     * @param Vokabeln Eine Liste von Vokabel-Objekten.
-     * @param Name Der Name der Vokabelliste.
-     * @param Sprache1 Der Sprachcode der ersten Sprache.
-     * @param Sprache2 Der Sprachcode der zweiten Sprache.
+     * @param vokabellisteID Die ID der Vokabelliste.
+     * @param vokabeln Eine Liste von Vokabel-Objekten.
+     * @param name Der Name der Vokabelliste.
+     * @param sprache1 Der Sprachcode der ersten Sprache.
+     * @param sprache2 Der Sprachcode der zweiten Sprache.
+     * @param kategorie Die Kategorie der Vokabelliste.
      */
-    public VokabelListe(int VokabellisteID, List<Vokabel> Vokabeln, String Name, String Sprache1, String Sprache2) {
-        this.VokabellisteID = VokabellisteID;
-        this.Vokabeln = Vokabeln;
-        this.Name = Name;
-        this.Sprache1 = Sprache1;
-        this.Sprache2 = Sprache2;
+    public VokabelListe(int vokabellisteID, List<Vokabel> vokabeln, String name, String sprache1, String sprache2, String kategorie) {
+        this.vokabellisteID = vokabellisteID;
+        this.vokabeln = vokabeln;
+        this.name = name;
+        this.sprache1 = sprache1;
+        this.sprache2 = sprache2;
+        this.kategorie = kategorie;
     }
 
     /** 
@@ -37,16 +39,16 @@ public class VokabelListe {
      * @return Die ID der Vokabelliste.
      */
     public int getVokabellisteID() {
-        return VokabellisteID;
+        return vokabellisteID;
     }
 
     /** 
      * Setzt die ID der Vokabelliste.
      * 
-     * @param VokabellisteID Die ID der Vokabelliste.
+     * @param vokabellisteID Die ID der Vokabelliste.
      */
-    public void setVokabellisteID(int VokabellisteID) {
-        this.VokabellisteID = VokabellisteID;
+    public void setVokabellisteID(int vokabellisteID) {
+        this.vokabellisteID = vokabellisteID;
     }
 
     /** 
@@ -55,16 +57,16 @@ public class VokabelListe {
      * @return Eine Liste von Vokabel-Objekten.
      */
     public List<Vokabel> getVokabeln() {
-        return Vokabeln;
+        return vokabeln;
     }
 
     /** 
      * Setzt eine Liste von Vokabel-Objekten.
      * 
-     * @param Vokabeln Eine Liste von Vokabel-Objekten.
+     * @param vokabeln Eine Liste von Vokabel-Objekten.
      */
-    public void setVokabeln(List<Vokabel> Vokabeln) {
-        this.Vokabeln = Vokabeln;
+    public void setVokabeln(List<Vokabel> vokabeln) {
+        this.vokabeln = vokabeln;
     }
 
     /** 
@@ -73,16 +75,16 @@ public class VokabelListe {
      * @return Der Name der Vokabelliste.
      */
     public String getName() {
-        return Name;
+        return name;
     }
 
     /** 
      * Setzt den Namen der Vokabelliste.
      * 
-     * @param Name Der Name der Vokabelliste.
+     * @param name Der Name der Vokabelliste.
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /** 
@@ -91,16 +93,16 @@ public class VokabelListe {
      * @return Der Sprachcode der ersten Sprache.
      */
     public String getSprache1() {
-        return Sprache1;
+        return sprache1;
     }
 
     /** 
      * Setzt den Sprachcode der ersten Sprache.
      * 
-     * @param Sprache1 Der Sprachcode der ersten Sprache.
+     * @param sprache1 Der Sprachcode der ersten Sprache.
      */
-    public void setSprache1(String Sprache1) {
-        this.Sprache1 = Sprache1;
+    public void setSprache1(String sprache1) {
+        this.sprache1 = sprache1;
     }
 
     /** 
@@ -109,21 +111,39 @@ public class VokabelListe {
      * @return Der Sprachcode der zweiten Sprache.
      */
     public String getSprache2() {
-        return Sprache2;
+        return sprache2;
     }
 
     /** 
      * Setzt den Sprachcode der zweiten Sprache.
      * 
-     * @param Sprache2 Der Sprachcode der zweiten Sprache.
+     * @param sprache2 Der Sprachcode der zweiten Sprache.
      */
-    public void setSprache2(String Sprache2) {
-        this.Sprache2 = Sprache2;
+    public void setSprache2(String sprache2) {
+        this.sprache2 = sprache2;
+    }
+
+    /** 
+     * Gibt die Kategorie der Vokabelliste zurück.
+     * 
+     * @return Die Kategorie der Vokabelliste.
+     */
+    public String getKategorie() {
+        return kategorie;
+    }
+
+    /** 
+     * Setzt die Kategorie der Vokabelliste.
+     * 
+     * @param kategorie Die Kategorie der Vokabelliste.
+     */
+    public void setKategorie(String kategorie) {
+        this.kategorie = kategorie;
     }
 
     @Override
     public String toString() {
-        return "VokabelListe{" + "VokabellisteID=" + VokabellisteID + ", Vokabeln=" + Vokabeln + ", Name=" + Name + ", Sprache1=" + Sprache1 + ", Sprache2=" + Sprache2 + '}';
+        return "VokabelListe{" + "vokabellisteID=" + vokabellisteID + ", vokabeln=" + vokabeln + ", name=" + name + ", sprache1=" + sprache1 + ", sprache2=" + sprache2 + ", kategorie=" + kategorie + '}';
     }
     
 }

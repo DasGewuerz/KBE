@@ -21,46 +21,46 @@ public class DuellverwaltungImpl implements Duellverwaltung {
     /** 
      * Erstellt ein neues Duell.
      * 
-     * @param DuellID Die ID des Duells.
-     * @param Benutzer1 Der erste Benutzer.
-     * @param Benutzer2 Der zweite Benutzer.
-     * @param Vokabelliste Die Liste der Vokabeln.
-     * @param Spielliste Die Liste der Spiele.
+     * @param duellID Die ID des Duells.
+     * @param benutzer1 Der erste Benutzer.
+     * @param benutzer2 Der zweite Benutzer.
+     * @param vokabelliste Die Liste der Vokabeln.
+     * @param spielliste Die Liste der Spiele.
      * @return Das erstellte Duell.
      */
     @Override
-    public Duell erstelleDuell(int DuellID, Benutzer Benutzer1, Benutzer Benutzer2, VokabelListe Vokabelliste, Spielliste Spielliste) {
-        return new Duell(DuellID, Benutzer1, Benutzer2, Vokabelliste, Spielliste);
+    public Duell erstelleDuell(int duellID, Benutzer benutzer1, Benutzer benutzer2, VokabelListe vokabelliste, Spielliste spielliste) {
+        return new Duell(duellID, benutzer1, benutzer2, vokabelliste, spielliste);
     }
 
     
     /** 
      * Erstellt ein neues Duell-Ergebnis.
      * 
-     * @param DuellErgebnisID Die ID des Duell-Ergebnisses.
-     * @param Duell Das Duell.
-     * @param Ergebnis Das Ergebnis des Duells.
-     * @param Timestamp Der Zeitstempel des Duell-Ergebnisses.
+     * @param duellErgebnisID Die ID des Duell-Ergebnisses.
+     * @param duell Das Duell.
+     * @param ergebnis Das Ergebnis des Duells.
+     * @param timestamp Der Zeitstempel des Duell-Ergebnisses.
      * @return Das erstellte Duell-Ergebnis.
      */
     @Override
-    public DuellErgebnis erstelleDuellErgebnis(int DuellErgebnisID, Duell Duell, Boolean Ergebnis, Timestamp Timestamp) {
+    public DuellErgebnis erstelleDuellErgebnis(int duellErgebnisID, Duell duell, Boolean Ergebnis, Timestamp Timestamp) {
         return new DuellErgebnis(DuellErgebnisID, Duell, Ergebnis, Timestamp);
     }
 
     
     /** 
-     * Erstellt eine neue Spielliste.
+     * Erstellt eine neue spielliste.
      * 
-     * @param SpiellisteID Die ID der Spielliste.
+     * @param SpiellisteID Die ID der spielliste.
      * @param Fragen Die Liste der Fragen.
      * @param AktiveFrage Die aktive Frage.
      * @param AktiverSpieler Der aktive Spieler.
-     * @return Die erstellte Spielliste.
+     * @return Die erstellte spielliste.
      */
     @Override
-    public Spielliste erstelleSpielliste(int SpiellisteID, List<Frage> Fragen, int AktiveFrage, int AktiverSpieler) {
-        return new Spielliste(SpiellisteID, Fragen, AktiveFrage, AktiverSpieler);
+    public spielliste erstelleSpielliste(int SpiellisteID, List<Frage> Fragen, int AktiveFrage, int AktiverSpieler) {
+        return new spielliste(SpiellisteID, Fragen, AktiveFrage, AktiverSpieler);
     }
 
     
@@ -69,7 +69,7 @@ public class DuellverwaltungImpl implements Duellverwaltung {
      * 
      * @param FrageID Die ID der Frage.
      * @param Vokabel Die Vokabel der Frage.
-     * @param SpiellisteID Die ID der Spielliste.
+     * @param SpiellisteID Die ID der spielliste.
      * @param Antworten Die Liste der Antworten.
      * @param Antwortoptionen Die Liste der Antwortoptionen.
      * @return Die erstellte Frage.

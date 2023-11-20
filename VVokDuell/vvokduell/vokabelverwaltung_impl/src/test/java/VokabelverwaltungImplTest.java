@@ -17,10 +17,10 @@ public class VokabelverwaltungImplTest {
     @Test
     public void testErstelleVokabel() {
         VokabelverwaltungImpl vokabelverwaltung = new VokabelverwaltungImpl();
-        Vokabel vokabel = vokabelverwaltung.erstelleVokabel(1, "Hund", Arrays.asList("Dog"));
+        Vokabel vokabel = vokabelverwaltung.erstelleVokabel(1, "Hund", Arrays.asList(Arrays.asList("Dog")));
         assertEquals(1, vokabel.getVokabelID());
-        assertEquals("Hund", vokabel.getVokabel1());
-        assertEquals(Arrays.asList("Dog"), vokabel.getVokabel2());
+        assertEquals("Hund", vokabel.getText());
+        assertEquals(Arrays.asList("Dog"), vokabel.getUebersetzung());
     }
 
     /**
@@ -29,10 +29,12 @@ public class VokabelverwaltungImplTest {
     @Test
     public void testErstelleVokabelListe() {
         VokabelverwaltungImpl vokabelverwaltung = new VokabelverwaltungImpl();
-        Vokabel vokabel1 = new Vokabel(1, "Hund", Arrays.asList("Dog"));
-        Vokabel vokabel2 = new Vokabel(2, "Katze", Arrays.asList("Cat"));
+
+        Vokabel vokabel1 = vokabelverwaltung.erstelleVokabel(1,"Hund", Arrays.asList(Arrays.asList("Dog")));
+        Vokabel vokabel2 = vokabelverwaltung.erstelleVokabel(2, "Katze", Arrays.asList(Arrays.asList("Cat")));
+        
         List<Vokabel> vokabeln = Arrays.asList(vokabel1, vokabel2);
-        VokabelListe vokabelListe = vokabelverwaltung.erstelleVokabelListe(1, vokabeln, "Tiere", "Deutsch", "Englisch");
+        VokabelListe vokabelListe = vokabelverwaltung.erstelleVokabelListe(1, vokabeln, "Tiere", "Deutsch", "Englisch", "Englisch A2");
         assertEquals(1, vokabelListe.getVokabellisteID());
         assertEquals(vokabeln, vokabelListe.getVokabeln());
         assertEquals("Tiere", vokabelListe.getName());

@@ -6,22 +6,21 @@ import java.util.List;
  * Diese Klasse repräsentiert ein Vokabelwort mit seinen Übersetzungen.
  */
 public class Vokabel {
-    private int VokabelID;
-    private String Vokabel1;
-    private List<String> Vokabel2; //TODO:Liste von Listen
-    //TODO:n zu 1ner Frage
+    private int vokabelID;
+    private String text;
+    private List<List<String>> uebersetzung; 
 
     /**
      * Konstruktor für die Vokabel-Klasse.
      * 
-     * @param VokabelID Die ID der Vokabel.
-     * @param Vokabel1  Das Vokabelwort in der ersten Sprache.
-     * @param Vokabel2  Eine Liste von Übersetzungen des Vokabelworts in der zweiten Sprache.
+     * @param vokabelID Die ID der Vokabel.
+     * @param text  Das Vokabelwort in der ersten Sprache.
+     * @param uebersetzung  Eine Liste von Übersetzungen des Vokabelworts in der zweiten Sprache.
      */
-    public Vokabel(int VokabelID, String Vokabel1, List<String> Vokabel2) {
-        this.VokabelID = VokabelID;
-        this.Vokabel1 = Vokabel1;
-        this.Vokabel2 = Vokabel2;
+    public Vokabel(int vokabelID, String text, List<List<String>> uebersetzung) {
+        this.vokabelID = vokabelID;
+        this.text = text;
+        this.uebersetzung = uebersetzung;
     }
 
     
@@ -29,53 +28,53 @@ public class Vokabel {
      * @return int
      */
     public int getVokabelID() {
-        return VokabelID;
+        return vokabelID;
     }
 
     
     /** 
-     * @param VokabelID
+     * @param vokabelID
      */
-    public void setVokabelID(int VokabelID) {
-        this.VokabelID = VokabelID;
+    public void setVokabelID(int vokabelID) {
+        this.vokabelID = vokabelID;
     }
 
     
     /** 
      * @return String
      */
-    public String getVokabel1() {
-        return Vokabel1;
+    public String getText() {
+        return text;
     }
 
     
     /** 
-     * @param Vokabel1
+     * @param text
      */
-    public void setVokabel1(String Vokabel1) {
-        this.Vokabel1 = Vokabel1;
+    public void setText(String text) {
+        this.text = text;
     }
 
     
     /** 
      * @return List<String>
      */
-    public List<String> getVokabel2() {
-        return Vokabel2;
+    public List<List<String>> getUebersetzung() {
+        return uebersetzung;
     }
 
     
     /** 
-     * @param Vokabel2
+     * @param uebersetzung
      */
-    public void setVokabel2(List<String> Vokabel2) {
-        this.Vokabel2 = Vokabel2;
+    public void setUebersetzung(List<List<String>> uebersetzung) {
+        this.uebersetzung = uebersetzung;
     }
 
 
     @Override
     public String toString() {
-        return "Vokabel{" + "VokabelID=" + VokabelID + ", Vokabel1=" + Vokabel1 + ", Vokabel2=" + Vokabel2 + '}';
+        return "Vokabel{" + "vokabelID=" + vokabelID + ", text=" + text + ", uebersetzung=" + uebersetzung + '}';
     }
     
 }

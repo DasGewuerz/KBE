@@ -14,30 +14,30 @@ public class VokabelverwaltungImpl implements Vokabelverwaltung{
     /** 
      * Erstellt eine neue Vokabel mit der gegebenen ID und den gegebenen Vokabeln.
      * 
-     * @param VokabelID Die ID der Vokabel.
-     * @param Vokabel1 Die erste Vokabel.
-     * @param Vokabel2 Eine Liste von Übersetzungen für die erste Vokabel.
+     * @param vokabelID Die ID der Vokabel.
+     * @param vokabel1 Die erste Vokabel.
+     * @param vokabel2 Eine Liste von Übersetzungen für die erste Vokabel.
      * @return Die erstellte Vokabel.
      */
     @Override
-    public Vokabel erstelleVokabel(int VokabelID, String Vokabel1, List<String> Vokabel2) {
-        return new Vokabel(VokabelID, Vokabel1, Vokabel2);
+    public Vokabel erstelleVokabel(int vokabelID, String text, List<List<String>> uebersetzung) {
+        return new Vokabel(vokabelID, text, uebersetzung);
     }
 
     
     /** 
      * Erstellt eine neue Vokabelliste mit der gegebenen ID, den gegebenen Vokabeln, dem gegebenen Namen und den gegebenen Sprachen.
      * 
-     * @param VokabellisteID Die ID der Vokabelliste.
-     * @param Vokabeln Eine Liste von Vokabeln.
-     * @param Name Der Name der Vokabelliste.
-     * @param Sprache1 Die Sprache der ersten Vokabel.
-     * @param Sprache2 Die Sprache der zweiten Vokabel.
+     * @param vokabellisteID Die ID der Vokabelliste.
+     * @param vokabeln Eine Liste von Vokabeln.
+     * @param name Der Name der Vokabelliste.
+     * @param sprache1 Die Sprache der ersten Vokabel.
+     * @param sprache2 Die Sprache der zweiten Vokabel.
      * @return Die erstellte Vokabelliste.
      */
     @Override
-    public VokabelListe erstelleVokabelListe( int VokabellisteID, List<Vokabel> Vokabeln, String Name, String Sprache1, String Sprache2) {
-        return new VokabelListe(VokabellisteID, Vokabeln, Name, Sprache1, Sprache2);
+    public VokabelListe erstelleVokabelListe( int vokabellisteID, List<Vokabel> vokabeln, String name, String sprache1, String sprache2, String kategorie) {
+        return new VokabelListe(vokabellisteID, vokabeln, name, sprache1, sprache2, kategorie);
     }
 }
     

@@ -16,10 +16,10 @@ public class SpielListe {
     /**
      * Konstruktor.
      *
-     * @param spielListeID
-     * @param fragen
-     * @param aktiveFrage
-     * @param aktiverSpieler
+     * @param spielListeID Die ID der Spielliste.
+     * @param fragen Die Liste der Fragen.
+     * @param aktiveFrage Der Index der aktiven Frage.
+     * @param aktiverSpieler Der Index des aktiven Spielers.
      */
     public SpielListe(int spielListeID, List<Frage> fragen, int aktiveFrage, int aktiverSpieler) {
         this.spielListeID = spielListeID;

@@ -105,7 +105,7 @@ public class DuellErgebnis {
     @Override
     public String toString() {
         return "DuellErgebnis{" +
-                "DuellergebnisID=" + duellErgebnisID +
+                "DuellErgebnisID=" + duellErgebnisID +
                 ", Duell=" + duell +
                 ", Ergebnis=" + ergebnis +
                 ", Timestamp=" + timestamp +

@@ -18,11 +18,11 @@ public class Frage {
 
     /**
      * Konstruktor.
-     * @param frageID
-     * @param vokabel
-     * @param spielListeID
-     * @param antworten
-     * @param antwortOptionen
+     * @param frageID Die ID der Frage.
+     * @param vokabel Die Vokabel der Frage.
+     * @param spielListeID Die ID der Spielliste.
+     * @param antworten Die Antworten der User.
+     * @param antwortOptionen Die Antwortoptionen.
      */
     public Frage(int frageID, Vokabel vokabel, int spielListeID, Map<Integer,Boolean> antworten, List<String> antwortOptionen) {
         this.frageID = frageID;

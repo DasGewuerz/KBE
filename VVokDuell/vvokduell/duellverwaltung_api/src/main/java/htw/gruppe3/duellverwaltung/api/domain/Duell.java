@@ -20,7 +20,7 @@ public class Duell {
      * @param benutzer1 Der erste Benutzer des Duells.
      * @param benutzer2 Der zweite Benutzer des Duells.
      * @param vokabelListe Die Liste der Vokabeln für das Duell.
-     * @param spielliste Die Liste der Spiele für das Duell.
+     * @param spielListe Die Liste der Spiele für das Duell.
      */
     public Duell(int duellID, Benutzer benutzer1, Benutzer benutzer2, VokabelListe vokabelListe, SpielListe spielListe) {
         this.duellID = duellID;

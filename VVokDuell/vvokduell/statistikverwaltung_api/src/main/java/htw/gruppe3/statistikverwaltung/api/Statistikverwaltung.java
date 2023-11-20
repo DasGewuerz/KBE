@@ -10,6 +10,13 @@ import java.util.List;
  */
 public interface Statistikverwaltung {
 
+    /**
+     * Erstellt eine neue Statistik mit der angegebenen ID, dem Benutzer und einer Liste von DuellErgebnissen.
+     * @param statistikID Die ID der Statistik.
+     * @param benutzer Der Benutzer, dem die Statistik zugeordnet ist.
+     * @param duellErgebnisse Eine Liste von DuellErgebnissen.
+     * @return Die erstellte Statistik.
+     */
     Statistik erstelleStatistik(int statistikID, Benutzer benutzer, List<DuellErgebnis> duellErgebnisse);
-    
+
 }

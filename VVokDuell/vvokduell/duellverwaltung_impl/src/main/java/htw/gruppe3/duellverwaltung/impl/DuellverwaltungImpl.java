@@ -56,7 +56,7 @@ public class DuellverwaltungImpl implements Duellverwaltung {
      * @param fragen Die Liste der Fragen.
      * @param aktiveFrage Die aktive Frage.
      * @param aktiverSpieler Der aktive Spieler.
-     * @return Die erstellte spielliste.
+     * @return Die erstellte Spielliste.
      */
     @Override
     public spielliste erstelleSpielliste(int spielListeID, List<Frage> fragen, int aktiveFrage, int aktiverSpieler) {

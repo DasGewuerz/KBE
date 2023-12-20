@@ -31,8 +31,8 @@ public class DuellverwaltungImplTest {
         DuellverwaltungImpl duellverwaltung = new DuellverwaltungImpl();
         Benutzer benutzer1 = new Benutzer(1, "Max Mustermann");
         Benutzer benutzer2 = new Benutzer(2, "Maria Musterfrau");
-        VokabelListe vokabelListe = new VokabelListe(1, Arrays.asList(new Vokabel(1, "Hund", Arrays.asList("Dog"))), "Tiere", "Deutsch", "Englisch");
-        SpielListe spielListe = new SpielListe(1, Arrays.asList(new Frage(1, new Vokabel(1, "Hund", Arrays.asList("Dog")), 1, new HashMap<>(), Arrays.asList("Dog", "Cat"))), 0, 1);
+        VokabelListe vokabelListe = new VokabelListe(1, Arrays.asList(new Vokabel(1, "Hund", Arrays.asList(Arrays.asList("Dog")))), "Tiere", "Deutsch", "Englisch","Tiere_K1");
+        SpielListe spielListe = new SpielListe(1, Arrays.asList(new Frage(1, new Vokabel(1, "Hund", Arrays.asList(Arrays.asList("Dog"))), 1, new HashMap<>(), Arrays.asList("Dog", "Cat"))), 0, 1);
         Duell duell = duellverwaltung.erstelleDuell(1, benutzer1, benutzer2, vokabelListe, spielListe);
         assertEquals(1, duell.getDuellID());
         assertEquals(benutzer1, duell.getBenutzer1());
@@ -48,7 +48,7 @@ public class DuellverwaltungImplTest {
     public void testErstelleDuellErgebnis() {
         DuellverwaltungImpl duellverwaltung = new DuellverwaltungImpl();
         Benutzer benutzer = new Benutzer(1, "Max Mustermann");
-        Duell duell = new Duell(1, benutzer, benutzer, new VokabelListe(1, Arrays.asList(new Vokabel(1, "Hund", Arrays.asList("Dog"))), "Tiere", "Deutsch", "Englisch"), new Spielliste(1, Arrays.asList(new Frage(1, new Vokabel(1, "Hund", Arrays.asList("Dog")), 1, new HashMap<>(), Arrays.asList("Dog", "Cat"))), 0, 1));
+        Duell duell = new Duell(1, benutzer, benutzer, new VokabelListe(1, Arrays.asList(new Vokabel(1, "Hund", Arrays.asList(Arrays.asList("Dog")))), "Tiere", "Deutsch", "Englisch","Tiere_K1"), new SpielListe(1, Arrays.asList(new Frage(1, new Vokabel(1, "Hund", Arrays.asList(Arrays.asList("Dog"))), 1, new HashMap<>(), Arrays.asList("Dog", "Cat"))), 0, 1));
         DuellErgebnis duellErgebnis = duellverwaltung.erstelleDuellErgebnis(1, duell, true, new Timestamp(System.currentTimeMillis()));
         assertEquals(1, duellErgebnis.getDuellErgebnisID());
         assertEquals(duell, duellErgebnis.getDuell());
@@ -61,7 +61,7 @@ public class DuellverwaltungImplTest {
     @Test
     public void testErstelleSpielliste() {
         DuellverwaltungImpl duellverwaltung = new DuellverwaltungImpl();
-        List<Frage> fragen = Arrays.asList(new Frage(1, new Vokabel(1, "Hund", Arrays.asList("Dog")), 1, new HashMap<>(), Arrays.asList("Dog", "Cat")));
+        List<Frage> fragen = Arrays.asList(new Frage(1, new Vokabel(1, "Hund", Arrays.asList(Arrays.asList("Dog"))), 1, new HashMap<>(), Arrays.asList("Dog", "Cat")));
         SpielListe spielListe = duellverwaltung.erstelleSpielListe(1, fragen, 0, 1);
         assertEquals(1, spielListe.getSpielListeID());
         assertEquals(fragen, spielListe.getFragen());
@@ -75,7 +75,7 @@ public class DuellverwaltungImplTest {
     @Test
     public void testErstelleFrage() {
         DuellverwaltungImpl duellverwaltung = new DuellverwaltungImpl();
-        Vokabel vokabel = new Vokabel(1, "Hund", Arrays.asList("Dog"));
+        Vokabel vokabel = new Vokabel(1, "Hund", Arrays.asList(Arrays.asList("Dog")));
         Map<Integer, Boolean> antworten = new HashMap<>();
         antworten.put(1, true);
         antworten.put(2, false);

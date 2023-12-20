@@ -107,7 +107,7 @@ public class Duell {
      *
      * @return Die Liste der Spiele für das Duell.
      */
-    public spielliste getSpielListe() {
+    public SpielListe getSpielListe() {
         return spielListe;
     }
 

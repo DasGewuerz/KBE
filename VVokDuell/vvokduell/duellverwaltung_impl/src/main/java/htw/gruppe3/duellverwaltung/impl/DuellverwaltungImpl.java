@@ -2,7 +2,7 @@ package htw.gruppe3.duellverwaltung.impl;
 
 import htw.gruppe3.duellverwaltung.api.domain.Duell;
 import htw.gruppe3.duellverwaltung.api.domain.DuellErgebnis;
-import htw.gruppe3.duellverwaltung.api.domain.Spielliste;
+import htw.gruppe3.duellverwaltung.api.domain.SpielListe;
 import htw.gruppe3.duellverwaltung.api.domain.Frage;
 import htw.gruppe3.vokabelverwaltung.api.domain.Vokabel;
 import htw.gruppe3.duellverwaltung.api.Duellverwaltung;
@@ -29,7 +29,7 @@ public class DuellverwaltungImpl implements Duellverwaltung {
      * @return Das erstellte Duell.
      */
     @Override
-    public Duell erstelleDuell(int duellID, Benutzer benutzer1, Benutzer benutzer2, VokabelListe vokabelListe, Spielliste spielListe) {
+    public Duell erstelleDuell(int duellID, Benutzer benutzer1, Benutzer benutzer2, VokabelListe vokabelListe, SpielListe spielListe) {
         return new Duell(duellID, benutzer1, benutzer2, vokabelListe, spielListe);
     }
 
@@ -59,8 +59,8 @@ public class DuellverwaltungImpl implements Duellverwaltung {
      * @return Die erstellte Spielliste.
      */
     @Override
-    public spielliste erstelleSpielliste(int spielListeID, List<Frage> fragen, int aktiveFrage, int aktiverSpieler) {
-        return new spielliste(spielListeID, fragen, aktiveFrage, aktiverSpieler);
+    public SpielListe erstelleSpielListe(int spielListeID, List<Frage> fragen, int aktiveFrage, int aktiverSpieler) {
+        return new SpielListe(spielListeID, fragen, aktiveFrage, aktiverSpieler);
     }
 
 

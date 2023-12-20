@@ -35,7 +35,7 @@ public class VokabelverwaltungImplTest {
         
         List<Vokabel> vokabeln = Arrays.asList(vokabel1, vokabel2);
         VokabelListe vokabelListe = vokabelverwaltung.erstelleVokabelListe(1, vokabeln, "Tiere", "Deutsch", "Englisch", "Englisch A2");
-        assertEquals(1, vokabelListe.getVokabellisteID());
+        assertEquals(1, vokabelListe.getVokabelListeID());
         assertEquals(vokabeln, vokabelListe.getVokabeln());
         assertEquals("Tiere", vokabelListe.getName());
         assertEquals("Deutsch", vokabelListe.getSprache1());

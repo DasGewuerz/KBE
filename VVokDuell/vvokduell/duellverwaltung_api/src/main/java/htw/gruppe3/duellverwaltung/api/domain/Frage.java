@@ -26,7 +26,7 @@ public class Frage {
      */
     public Frage(int frageID, Vokabel vokabel, int spielListeID, Map<Integer,Boolean> antworten, List<String> antwortOptionen) {
         this.frageID = frageID;
-        this.Vokabel = vokabel;
+        this.vokabel = vokabel;
         this.spielListeID = spielListeID;
         this.antworten = antworten;
         this.antwortOptionen = antwortOptionen;

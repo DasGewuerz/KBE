@@ -7,7 +7,7 @@ import java.util.Map;
 import htw.gruppe3.duellverwaltung.api.domain.Duell;
 import htw.gruppe3.benutzerverwaltung.api.domain.Benutzer;
 import htw.gruppe3.duellverwaltung.api.domain.DuellErgebnis;
-import htw.gruppe3.duellverwaltung.api.domain.Spielliste;
+import htw.gruppe3.duellverwaltung.api.domain.SpielListe;
 import htw.gruppe3.vokabelverwaltung.api.domain.VokabelListe;
 import htw.gruppe3.duellverwaltung.api.domain.Frage;
 import htw.gruppe3.vokabelverwaltung.api.domain.Vokabel;
@@ -49,7 +49,7 @@ public interface Duellverwaltung {
      * @param aktiverSpieler Der aktive Spieler.
      * @return Die erstellte Spiel-Liste.
      */
-    Spielliste erstelleSpielListe(int spielListeID, List<Frage> fragen, int aktiveFrage, int aktiverSpieler);
+    SpielListe erstelleSpielListe(int spielListeID, List<Frage> fragen, int aktiveFrage, int aktiverSpieler);
 
     /**
      * Erstellt eine neue Frage mit der angegebenen ID, der Vokabel, der Spiel-Liste, den Antworten und den Antwort-Optionen.
